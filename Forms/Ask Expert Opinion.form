@@ -1,0 +1,35 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "22173ef"
+  },
+  "schemaVersion": 18,
+  "id": "expert-opinion-16oamkr",
+  "components": [
+    {
+      "text": "# Expert Needed\nAn AI agent has decided that you're better at dealing with the following question: \n{{question}}",
+      "type": "text",
+      "layout": {
+        "row": "Row_0vswpy0",
+        "columns": null
+      },
+      "id": "Field_1m8n4tb"
+    },
+    {
+      "label": "Your Answer",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_03lz2kk",
+        "columns": null
+      },
+      "id": "Field_17v6q84",
+      "key": "expertAnswer",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default"
+}

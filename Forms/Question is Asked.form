@@ -1,0 +1,124 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "9f45323"
+  },
+  "schemaVersion": 18,
+  "id": "question-is-asked-0s42v52",
+  "components": [
+    {
+      "text": "# Question Time",
+      "type": "text",
+      "layout": {
+        "row": "Row_0jt2ci9",
+        "columns": null
+      },
+      "id": "Field_02bfn3u"
+    },
+    {
+      "label": "Question",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1kixf0k",
+        "columns": null
+      },
+      "id": "Field_1cu52m3",
+      "key": "question"
+    },
+    {
+      "label": "What Services Do you Want?",
+      "values": [
+        {
+          "label": "Answered by AI ",
+          "value": "ask_openai"
+        },
+        {
+          "label": "Answered by a Friend",
+          "value": "ask_human1"
+        },
+        {
+          "label": "Email Reminder",
+          "value": "reminder_id"
+        }
+      ],
+      "type": "taglist",
+      "layout": {
+        "row": "Row_0k6kojv",
+        "columns": null
+      },
+      "id": "Field_0hxmvst",
+      "key": "tasksToActivate"
+    },
+    {
+      "label": "Email Details",
+      "components": [
+        {
+          "label": "Name",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_18bbb19",
+            "columns": null
+          },
+          "id": "Field_1mojz6k",
+          "key": "name",
+          "validate": {
+            "required": true
+          }
+        },
+        {
+          "label": "Email",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_18bbb19",
+            "columns": null
+          },
+          "id": "Field_1y8wlhk",
+          "key": "email",
+          "validate": {
+            "required": true
+          }
+        },
+        {
+          "label": "Minute before reminder is sent",
+          "type": "number",
+          "layout": {
+            "row": "Row_0iwqr7q",
+            "columns": null
+          },
+          "id": "Field_060na2f",
+          "key": "reminderMins",
+          "defaultValue": 1,
+          "validate": {
+            "required": true,
+            "min": 1,
+            "max": 60
+          }
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "layout": {
+        "row": "Row_0jztb9t",
+        "columns": null
+      },
+      "id": "Field_0yhgj8j",
+      "conditional": {
+        "hide": "=not(list contains(tasksToActivate, \"reminder_id\"))"
+      }
+    },
+    {
+      "computeOn": "presubmit",
+      "type": "expression",
+      "layout": {
+        "row": "Row_0buw5s3",
+        "columns": null
+      },
+      "id": "Field_1v21f0b",
+      "key": "expertAsked",
+      "expression": "=false"
+    }
+  ],
+  "type": "default"
+}

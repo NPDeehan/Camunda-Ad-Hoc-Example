@@ -1,0 +1,73 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "ab2f162"
+  },
+  "schemaVersion": 18,
+  "id": "check-results-1a6hnsk",
+  "components": [
+    {
+      "text": "# Your Question is Answered",
+      "type": "text",
+      "layout": {
+        "row": "Row_15u227w",
+        "columns": null
+      },
+      "id": "Field_0nolu6o"
+    },
+    {
+      "text": "#### You asked: {{question}}",
+      "type": "text",
+      "layout": {
+        "row": "Row_1izm2zn",
+        "columns": null
+      },
+      "id": "Field_087hkeo"
+    },
+    {
+      "label": "Summary of Friend's Response",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0qhd5au",
+        "columns": null
+      },
+      "id": "Field_17tgndk",
+      "key": "humanAnswerSum",
+      "readonly": true,
+      "conditional": {
+        "hide": "=not(list contains(tasksToActivate, \"ask_human1\"))"
+      }
+    },
+    {
+      "label": "Summary of AI Response",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_03w82ti",
+        "columns": null
+      },
+      "id": "Field_14r40u1",
+      "key": "aiResponse",
+      "conditional": {
+        "hide": "=not(list contains(tasksToActivate, \"ask_openai\"))"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Expert Said:",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0msfsvm",
+        "columns": null
+      },
+      "id": "Field_1ayndlm",
+      "key": "expertAnswer",
+      "readonly": true,
+      "conditional": {
+        "hide": "=not(expertAsked)"
+      }
+    }
+  ],
+  "type": "default"
+}

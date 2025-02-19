@@ -1,0 +1,43 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "ab2f162"
+  },
+  "schemaVersion": 18,
+  "id": "ask-human-07rzmgr",
+  "components": [
+    {
+      "text": "# Here's a Question for you: \n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1w6ncxe",
+        "columns": null
+      },
+      "id": "Field_1fn5m51"
+    },
+    {
+      "label": "Question",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0vjkkvf",
+        "columns": null
+      },
+      "id": "Field_0pbkfe8",
+      "key": "question",
+      "readonly": true
+    },
+    {
+      "label": "Your Answer",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_000sb6e",
+        "columns": null
+      },
+      "id": "Field_0svhdwu",
+      "key": "humanAnswer"
+    }
+  ],
+  "type": "default"
+}
